@@ -3,6 +3,7 @@
   "displayName": "Var Conv",
   "description": "变量命名快速转换",
   "version": "0.0.1",
+  "publisher": "var-conv",
   "engines": {
     "vscode": "^1.61.0"
   },
@@ -24,7 +25,10 @@
     "命名"
   ],
   "repository": {
-    "url": ""
+    "url": "https://github.com/OSpoon/var-conv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/OSpoon/var-conv/issues"
   },
   "categories": [
     "Other"
