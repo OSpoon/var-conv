@@ -1,9 +1,10 @@
 {
   "name": "var-conv",
-  "displayName": "Var Conv",
+  "displayName": "Var Conversion",
   "description": "变量命名快速转换",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "xiaoxintongxue",
+  "icon": "images/icon.png",
   "engines": {
     "vscode": "^1.61.0"
   },
@@ -24,7 +25,9 @@
     "转换",
     "命名"
   ],
+  "homepage": "https://github.com/OSpoon/var-conv/blob/master/README.md",
   "repository": {
+    "type": "git",
     "url": "https://github.com/OSpoon/var-conv.git"
   },
   "bugs": {
