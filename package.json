@@ -1,8 +1,8 @@
 {
   "name": "var-conv",
   "displayName": "Var Conversion",
-  "description": "变量命名快速转换",
-  "version": "0.0.2",
+  "description": "适用于VSCode IDE的代码变量名称快速转换工具",
+  "version": "0.0.3",
   "publisher": "xiaoxintongxue",
   "icon": "images/icon.png",
   "engines": {
@@ -34,7 +34,7 @@
     "url": "https://github.com/OSpoon/var-conv/issues"
   },
   "categories": [
-    "Other"
+    "Extension Packs"
   ],
   "activationEvents": [
     "onCommand:var-conv.UpperCamelCase",

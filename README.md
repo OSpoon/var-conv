@@ -1,4 +1,4 @@
-## Var Conv
+## Var Conversion
 
 > 一款适用于VSCode IDE的代码变量名称快速转换工具
 
