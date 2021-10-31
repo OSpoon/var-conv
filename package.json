@@ -3,7 +3,7 @@
   "displayName": "Var Conv",
   "description": "变量命名快速转换",
   "version": "0.0.1",
-  "publisher": "var-conv",
+  "publisher": "xiaoxintongxue",
   "engines": {
     "vscode": "^1.61.0"
   },
