@@ -2,7 +2,7 @@
   "name": "var-conv",
   "displayName": "Var Conversion",
   "description": "适用于VSCode IDE的代码变量名称快速转换工具",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "xiaoxintongxue",
   "icon": "images/icon.png",
   "engines": {
@@ -42,7 +42,7 @@
     "onCommand:var-conv.CamelCase",
     "onCommand:var-conv.Snake",
     "onCommand:var-conv.Hyphen",
-    "onCommand:var-conv.Const",
+    "onCommand:var-conv.Constant",
     "onCommand:var-conv.LocaleLowerCase",
     "onCommand:var-conv.LocaleUpperCase",
     "onCommand:var-conv.SpaceUpperCase",
@@ -70,7 +70,7 @@
         "title": "04.连字符写法 (中划线命名法)"
       },
       {
-        "command": "var-conv.Const",
+        "command": "var-conv.Constant",
         "title": "05.常量名"
       },
       {
@@ -136,7 +136,7 @@
           "group": "var-conv"
         },
         {
-          "command": "var-conv.Const",
+          "command": "var-conv.Constant",
           "group": "var-conv"
         },
         {

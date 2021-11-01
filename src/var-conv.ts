@@ -1,52 +1,11 @@
 // 解析对象
 class VarConv {
-  maps = {
-    upperCamelCase: {
-      title: "大驼峰写法 (帕斯卡命名法)",
-      search: "dtf,datuofeng,psk,pasika,ucc,uppercamelcase",
-    },
-    camelCase: {
-      title: "小驼峰写法 (驼峰命名法)",
-      search: "xtf,xiaotuofeng,cc,camelcase",
-    },
-    snake: {
-      title: "蛇形写法 (下划线命名法)",
-      search: "sx,shexing,xhx,xiahuaxian,snake,_",
-    },
-    hyphen: {
-      title: "连字符写法 (中划线命名法)",
-      search: "l,h,lzf,lianzifu,zhx,zhonghuaxian,hyphen,-",
-    },
-    constant: { title: "常量名", search: "clm,changliangming,const" },
-    localeLowerCase: {
-      title: "全小写",
-      search: "qxx,quanxiaoxie,llc,localelowercase",
-    },
-    localeUpperCase: {
-      title: "全大写",
-      search: "qdx,quandaxie,luc,localeuppercase",
-    },
-    spaceUpperCase: {
-      title: "空格 全大写",
-      search: " dx, qdx,kdx,kqd,kgqdx,kongquandaxie,konggequandaxie",
-    },
-    spaceLowerCase: {
-      title: "空格 全小写",
-      search: " xx, qxx,kxx,kqx,kgqxx,kongquanxiao,konggequanxiaoxie",
-    },
-    spaceUpperCamelCase: {
-      title: "空格 大驼峰",
-      search: " dtf,kdtf,kgdtf,kongdatuofeng,konggedatuofeng",
-    },
-    spaceCamelCase: {
-      title: "空格 小驼峰",
-      search: " xtf,kxtf,kongxiaotuofeng,konggexiaotuofeng",
-    },
-  };
-
+  fns: Map<string, Function> | undefined;
   originVarName: string;
   varSplit: string[] | undefined;
+
   constructor(varName: string) {
+    this.initCommandMap();
     // 保留原始字符串
     this.originVarName = varName;
     // 尝试拆分
@@ -61,6 +20,21 @@ class VarConv {
       varSplit = varName.match(/(^[A-Z]|^|[A-Z])([a-z]+)?/g);
     }
     this.varSplit = varSplit?.join("-").toLocaleLowerCase().split("-");
+  }
+
+  initCommandMap(): void {
+    this.fns = new Map<string, Function>();
+    this.fns.set("UpperCamelCase", this.toUpperCamelCase);
+    this.fns.set("CamelCase", this.toCamelCase);
+    this.fns.set("Snake", this.toSnake);
+    this.fns.set("Hyphen", this.toHyphen);
+    this.fns.set("Constant", this.toConstant);
+    this.fns.set("LocaleLowerCase", this.toLocaleLowerCase);
+    this.fns.set("LocaleUpperCase", this.toLocaleUpperCase);
+    this.fns.set("SpaceUpperCase", this.toSpaceUpperCase);
+    this.fns.set("SpaceLowerCase", this.toSpaceLowerCase);
+    this.fns.set("SpaceUpperCamelCase", this.toSpaceUpperCamelCase);
+    this.fns.set("SpaceCamelCase", this.toSpaceCamelCase);
   }
 
   // 大驼峰写法 (帕斯卡命名法) UserName
@@ -100,7 +74,7 @@ class VarConv {
   }
 
   // 常量写法 (全大写下划线) USER_NAME
-  toConst() {
+  toConstant() {
     return this.varSplit?.join("_").toLocaleUpperCase();
   }
 
