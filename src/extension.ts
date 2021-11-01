@@ -91,7 +91,7 @@ function handler(key: string, args: vscode.TextEditor) {
   const origin = args.document.getText(args.selection);
   if (isNoEmpty(origin)) {
     const conv = new VarConv(origin);
-    const value = new VarConv(origin).fns?.get(key)?.call(conv, null);
+    const value = conv.fns?.get(key)?.call(conv, null);
     if (value) {
       replace(value);
     }
