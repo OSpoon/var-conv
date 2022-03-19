@@ -2,7 +2,7 @@
   "name": "var-conv",
   "displayName": "Var Conversion",
   "description": "适用于VSCode IDE的代码变量名称快速转换工具",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "xiaoxintongxue",
   "icon": "images/icon.png",
   "engines": {
@@ -169,6 +169,38 @@
       {
         "id": "var-conv/editor/context/conv",
         "label": "变量命名转换"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "var-conv.UpperCamelCase",
+        "key": "alt+1",
+        "mac": "option+1",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-conv.CamelCase",
+        "key": "alt+2",
+        "mac": "option+2",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-conv.Snake",
+        "key": "alt+3",
+        "mac": "option+3",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-conv.Hyphen",
+        "key": "alt+4",
+        "mac": "option+4",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "var-conv.Constant",
+        "key": "alt+5",
+        "mac": "option+5",
+        "when": "editorTextFocus"
       }
     ]
   },
