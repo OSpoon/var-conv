@@ -2,6 +2,8 @@
 
 > 一款适用于VSCode IDE的代码变量名称快速转换工具
 
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/xiaoxintongxue.var-conv)
+
 
 ### 支持转换的类型：
 
